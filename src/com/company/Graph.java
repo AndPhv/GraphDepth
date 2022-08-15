@@ -31,6 +31,8 @@ public class Graph {
     }
 
     public void passInDeep(int index) {
-
+        System.out.println(vertexList[index].name);
+        vertexList[index].isVisited = true;
+        stack.push(index);
     }
 }
