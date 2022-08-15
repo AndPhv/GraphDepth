@@ -5,6 +5,7 @@ public class Graph {
     private int[][] matrix;
     Vertex[] vertexList;
     private int currentV;
+    private GraphStack stack = new GraphStack();
 
     public Graph() {
         vertexList = new Vertex[amountV];
@@ -27,5 +28,9 @@ public class Graph {
                 return i;
         }
         return -1;
+    }
+
+    public void passInDeep(int index) {
+
     }
 }
