@@ -21,7 +21,7 @@ public class Main {
             graph.addVertex(scanner.next());
             System.out.println("Номер вершины равен " + i);
         }
-        for (int i = 0; i < graph.amountV; i++) {
+        for (int i = 0; i < graph.amountV - 1; i++) {
             System.out.println("Соединить вершину ");
             x = scanner.nextInt();
             System.out.println(" с вершиной ");
