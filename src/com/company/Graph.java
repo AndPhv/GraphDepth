@@ -34,5 +34,19 @@ public class Graph {
         System.out.println(vertexList[index].name);
         vertexList[index].isVisited = true;
         stack.push(index);
+
+        while (!stack.isEmpty()) {
+            int neigh = check(stack.peek());
+            if (neigh == -1)
+                neigh = stack.pop();
+            else {
+                System.out.println(vertexList[neigh].name);
+                vertexList[neigh].isVisited = true;
+                stack.push(neigh);
+            }
+        }
+        for (int i = 0; i < currentV; i++) {
+            vertexList[i].isVisited = false;
+        }
     }
 }
